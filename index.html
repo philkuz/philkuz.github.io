@@ -46,6 +46,9 @@
         border-radius: 50%;
         vertical-align: middle;
     }
+    tr img {
+        width: 160px;
+    }
     .one
     {
     width: 160px;
@@ -68,6 +71,20 @@
     }
     span.highlight {
         background-color: #ffffd0;
+    }
+    .header {
+		background: no-repeat center center;
+		background-image: url(images/japan_garden.jpg);
+        background-size: cover;
+        overflow: hidden;
+        height: 100px;
+		max-width: 800px;
+		padding-bottom: 0px;
+		padding-top: 0px;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 0px;
+		overflow: hidden;
     }
   </style>
   <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
@@ -92,6 +109,9 @@
   <link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
   </head>
   <body>
+  <!-- <div class="header"> -->
+  <!--     <1!-- <img src="images/japan_garden.jpg"> --1> -->
+  <!--     </div> -->
   <table width="800" border="0" align="center" cellspacing="0" cellpadding="0">
     <tr>
     <td>
@@ -117,7 +137,7 @@
         </p>
         </td>
         <td width="33%" class="img-circle">
-            <img src="images/philkuz.png">
+            <img src="http://alinea.ai/wp-content/uploads/2018/03/personal-phil-newcolor-1.png">
         </td>
       </tr>
       </table>
@@ -158,7 +178,7 @@
             /
             <a href="https://drive.google.com/file/d/1rzoyGXS-Wzqm-N7CzNKXpVut8oCq7Oz7/view">Chapter</a>
             <p></p>
-            <p>Chapter describing the failures of Machine Learning models in the context of AI Safety.</p>
+            <p>Chapter surveying the field of Adversarial Machine Learning with connections to AI Safety.</p>
           </td>
         </tr>
 
@@ -185,6 +205,25 @@
             from models that are initialized randomly.</p>
           </td>
         </tr>
+        <tr >
+          <td width="25%">
+            <img width=160px src='images/pixelrnn.png'>
+          </td>
+          <td valign="top" width="75%">
+          <a href="https://www.oreilly.com/ideas/using-tensorflow-to-generate-images-with-pixelrnns">
+                <papertitle>Using TensorFlow to generate images with PixelRNNs</papertitle>
+
+          </a>
+          <br>
+              <strong>Phillip Kuznetsov</strong>,
+              <a href="http://noahgolmant.com/">Noah Golmant</a>
+              <br>
+              <em>O'Reilly Blog</em><br>
+            <a href="http://rileyedmunds.com/download/dlsw2017.pdf">PDF</a>
+            <p>Work demonstrating that Universal Adversarial Attacks transfer between child models of Meta-Learned models than
+            from models that are initialized randomly.</p>
+          </td>
+        </tr>
 
       </table>
       <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
@@ -206,6 +245,149 @@
           </a>
           <br>
             <p>Founded UC Berkeley's first Machine Learning student organization. President in Spring Semester of 2018.</p>
+          </td>
+        </tr>
+
+        <tr>
+          <td width="25%">
+            
+            <img src='images/alexa_prize.jpg' width=160px>
+          </td>
+          <td valign="top" width="75%">
+          <a href="https://s3.amazonaws.com/alexaprize/2017/technical-article/eigen.pdf">
+                <papertitle>Alexa Prize</papertitle>
+          </a>
+          <br>
+          <a href="https://s3.amazonaws.com/alexaprize/2017/technical-article/eigen.pdf">Proceedings</a> &nbsp/&nbsp
+          <a href="https://github.com/EigenAlexa"> GitHub </a>
+          <br>
+            
+            <p>
+            One of the sponsored teams entered in the inaugural Alexa Prize competition. 
+            Given a $100k research grant and unlimited to AWS to build a conversational 
+            chatbot. 
+            </p>
+          </td>
+        </tr>
+
+        <tr onmouseout="inpainting_stop()" onmouseover="inpainting_start()">
+          <td width="25%">
+          	<div class="one">
+				<div class="two" id="inpainting_image" style="opacity: 0;">
+                    <img src="images/texture_cue_output.png">
+                </div>
+                <img src="images/texture_cue_input.png">
+            </div> 
+            <script type="text/javascript">
+                function inpainting_start() {
+                    document.getElementById('inpainting_image').style.opacity = "1";
+            
+                }
+                function inpainting_stop() {
+                    document.getElementById('inpainting_image').style.opacity = "0";
+                            
+                }
+                inpainting_stop()
+            </script>
+          </td>
+          <td valign="top" width="75%">
+          <a href="https://philkuz.github.io/184final/">
+                <papertitle>Extrapolating Texture from Texture Cues</papertitle>
+          </a>
+          <br>
+              <strong>Phillip Kuznetsov</strong>,
+              Stefan Palombo,
+              Gabriel Gardner,
+              Rahil Mathur,
+              Michael Luo
+          <br>
+
+          <a href="https://philkuz.github.io/184final/">Project Website</a>
+          <br>
+            <p> We attempt to apply textures automatically to non-textured images of 3d renderings using convolutional neural networks as a final step in a graphics pipeline. Our final product is a system in which you can pass an untextured rendering with a texture cue into a trained convolutional neural network that then outputs a fully textured result.
+            </p>
+          </td>
+        </tr>
+
+        <tr>
+          <td width="25%">
+            
+            <img src='images/cans.png' width=160px>
+          </td>
+          <td valign="top" width="75%">
+          <a href="https://github.com/mlberkeley/Creative-Adversarial-Networks">
+                <papertitle>Creative Adversarial Networks</papertitle>
+          </a>
+          <br>
+          <a href="https://github.com/mlberkeley/Creative-Adversarial-Networks">Github</a>
+          <br>
+            <p>First Open-source Implementation of Creative Adversarial Networks. Adapts
+            the Generative Adversarial Network objective function to try to maximize the entropy
+            for a style-class distribution, while also minimizing the original 
+            adversarial objective.</p>
+          </td>
+        </tr>
+        <tr onmouseout="compress_stop()" onmouseover="compress_start()">
+          <td width="25%">
+          	<div class="one">
+				<div class="two" id="compress_image" style="opacity: 0;">
+                    <img src="images/monkey_compress.jpg">
+                </div>
+                <img src="images/monkey_og.jpg">
+            </div> 
+            <script type="text/javascript">
+                function compress_start() {
+                    document.getElementById('compress_image').style.opacity = "1";
+            
+                }
+                function compress_stop() {
+                    document.getElementById('compress_image').style.opacity = "0";
+                            
+                }
+                compress_stop()
+            </script>
+          </td>
+          <td valign="top" width="75%">
+                <papertitle>Image Compression by Abstracting out Details</papertitle>
+          <br>
+            <a href="pdf/ablative.pdf">PDF</a>
+            <p> We propose a method to apply a pre-trained Generative Adversarial Networks to 
+            image compression. The proposed method removes significant portions of an image 
+            while retaining some assistant information, and fills the gaps using generative 
+            model inpainting. We use Plug and Play Generative Networks as our inpainting 
+            network, and explore several different ablation schemes in order to determine 
+            the most useful information present in an image, according to the quality
+            of the reconstruction.</p>
+          </td>
+        </tr>
+        <tr>
+          <td width="25%">
+            
+            <img src='images/openbrain.png' width=160px>
+          </td>
+          <td valign="top" width="75%">
+          <a href="https://github.com/mlberkeley/openbrain">
+              <papertitle>Asynchronous Hebbian Learning</papertitle>
+          </a>
+          <br>
+          <a href="https://www.youtube.com/watch?v=vOHumxida9M">Minecraft Demo</a> &nbsp/&nbsp
+          <a href="https://github.com/mlberkeley/openbrain"> GitHub </a>
+          <br>
+            <p>Asynchronous neural network implementation using Hebbian learning rules. Later adapted to replace local Hebbian rules with RL approach based on DDPG.</p>
+          </td>
+        </tr>
+        <tr>
+          <td width="25%">
+            
+            <img src='images/raspi.jpeg' width=160px>
+          </td>
+          <td valign="top" width="75%">
+          <a href="https://ml.berkeley.edu">
+                <papertitle>Raspberry PI cluster</papertitle>
+          </a>
+          <br>
+            <p>Multiple node cluster built out of 32 Raspberry PI B+. Networked together using a standard network switch. Bootstrapped a custom power supply
+            originall intended for Christmas lights. Utilized Erlang to communicate between the compute nodes and run the above algorithm across all machines.
           </td>
         </tr>
 
